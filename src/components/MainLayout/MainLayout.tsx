@@ -19,6 +19,9 @@ function Copyright() {
 }
 
 const useStyles = makeStyles((theme) => ({
+  main: {
+    backgroundColor: 'palegoldenrod',
+  },
   container: {
     paddingBottom: theme.spacing(8),
   },
@@ -34,7 +37,7 @@ const MainLayout: React.FC = ({children}) => {
   return (
     <>
       <Header/>
-      <main>
+      <main className={classes.main}>
         <Container className={classes.container} maxWidth="md">
           {children!}
         </Container>
